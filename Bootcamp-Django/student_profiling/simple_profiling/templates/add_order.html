@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <h1 class="mt-4">Add Order</h1>
+      <form method="post" class="mt-4">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="id_client">Client:</label>
+            {{ form.client_id }}
+        </div>
+        <div class="form-group">
+          <label for="id_product">Product:</label>
+            {{ form.product_id }}
+        </div>
+        <div class="form-group">
+          <label for="id_date_ordered">Date Ordered:</label>
+          <input type="date" id="id_date_ordered" name="order_date" class="form-control" value="{{ order.order_date }}">
+        </div>
+        <div class="form-group">
+          <label for="id_quantity">Quantity:</label>
+          <input type="number" id="id_quantity" name="quantity" class="form-control" value="{{ order.quantity }}">
+        </div>
+        <div class="form-group">
+          <label for="id_date_received">Date Received:</label>
+          <input type="date" id="id_date_received" name="delivery_date" class="form-control" value="{{ order.delivery_date }}">
+        </div>
+        <button type="submit" class="btn btn-primary">Add Order</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

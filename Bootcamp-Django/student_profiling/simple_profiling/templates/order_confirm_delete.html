@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <h1 class="mt-4">Confirm Order Deletion</h1>
+      <p>Are you sure you want to delete the order "{{ order.id }}"?</p>
+      <form method="post" action="{% url 'order-delete' orders.pk %}">
+        {% csrf_token %}
+        <div class="mt-4">
+          <input type="submit" class="btn btn-danger" value="Delete">
+          <a href="{% url 'order-list' %}" class="btn btn-secondary">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

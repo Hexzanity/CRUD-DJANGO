@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <h1 class="mt-4">Update Client</h1>
+      <form method="POST" action="{% url 'client-update' client.pk %}">
+        {% csrf_token %}
+        <div class="form-group mt-4">
+          <label for="id_first_name">First name:</label>
+          <input type="text" id="id_first_name" name="first_name" class="form-control" value="{{ client.first_name }}">
+        </div>
+        <div class="form-group mt-4">
+          <label for="id_last_name">Last name:</label>
+          <input type="text" id="id_last_name" name="last_name" class="form-control" value="{{ client.last_name }}">
+        </div>
+        <div class="form-group mt-4">
+          <label for="id_birthdate">Birthdate:</label>
+          <input type="text" id="id_birthdate" name="birthdate" class="form-control" value="{{ client.birthdate }}">
+        </div>
+        <div class="form-group mt-4">
+          <label for="id_address">Address:</label>
+          <input type="text" id="id_address" name="address" class="form-control" value="{{ client.address }}">
+        </div>
+        <div class="form-group mt-4">
+          <label for="id_email">Email:</label>
+          <input type="email" id="id_email" name="email" class="form-control" value="{{ client.email }}">
+        </div>
+        <div class="form-group mt-4">
+          <label for="id_password">Password:</label>
+          <input type="password" id="id_password" name="password" class="form-control" value="{{ client.password }}">
+        </div>
+        <div class="mt-4">
+          <button type="submit" class="btn btn-primary">Save</button>
+          <a href="{% url 'client-list' %}" class="btn btn-secondary">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

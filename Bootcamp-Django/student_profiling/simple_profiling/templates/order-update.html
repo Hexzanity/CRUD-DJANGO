@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <h1 class="mt-4">Update Order</h1>
+      <form method="POST" action="{% url 'order-update' order.pk %}">
+        {% csrf_token %}
+        <div class="form-group mt-4">
+          <label for="id_client">Client:</label>
+          {{ form.client_id }}
+        </div>
+        <div class="form-group mt-4">
+          <label for="id_product">Product:</label>
+          {{ form.product_id }}
+        </div>
+        <div class="form-group mt-4">
+          <label for="id_date_ordered">Date Ordered:</label>
+          {{ form.order_date }}
+        </div>
+        <div class="form-group mt-4">
+          <label for="id_quantity">Quantity:</label>
+          {{ form.quantity }}
+        </div>
+        <div class="form-group mt-4">
+          <label for="id_date_received">Date Received:</label>
+          {{ form.delivery_date }}
+        </div>
+        <div class="mt-4">
+          <button type="submit" class="btn btn-primary">Save</button>
+          <a href="{% url 'order-list' %}" class="btn btn-secondary">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

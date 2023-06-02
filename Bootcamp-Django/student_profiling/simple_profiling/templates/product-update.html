@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <h1 class="mt-4">Update Product</h1>
+      <form method="POST" action="{% url 'product-update' product.pk %}">
+        {% csrf_token %}
+        <div class="form-group mt-4">
+          {{ form.as_p }}
+        </div>
+        <div class="mt-4">
+          <button type="submit" class="btn btn-primary">Save</button>
+          <a href="{% url 'product-list' %}" class="btn btn-secondary">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

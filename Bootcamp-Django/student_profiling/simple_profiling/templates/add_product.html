@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <h1 class="mt-4">Add Product</h1>
+      <form method="post" class="mt-4">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="id_name">Name:</label>
+          {{ form.name }}
+        </div>
+        <div class="form-group">
+          <label for="id_color">Color:</label>
+          {{ form.color }}
+        </div>
+        <div class="form-group">
+          <label for="id_size">Size:</label>
+          {{ form.size }}
+        </div>
+        <div class="form-group">
+          <label for="id_price">Price:</label>
+          {{ form.price }}
+        </div>
+        <div class="form-group">
+          <label for="id_stock">Stock:</label>
+          {{ form.stock }}
+        </div>
+        <div class="form-group">
+          <label for="id_category_id">Category ID:</label>
+          {{ form.category_id }}
+        </div>
+        <div class="form-group">
+          <label for="id_supplier_id">Supplier ID:</label>
+          {{ form.supplier_id }}
+        </div>
+        <button type="submit" class="btn btn-primary">Add Product</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-end">
+    <div class="col-lg-10 col-md-8">
+      <h1>Order List</h1>
+      <a href="{% url 'add-order' %}" class="btn btn-primary">Add Order</a>
+ 
+      <table class="table table-striped mt-4">
+        <thead>
+          <tr>
+            <th class="text-center">Client</th>
+            <th class="text-center">Product</th>
+            <th class="text-center">Date Ordered</th>
+            <th class="text-center">Quantity</th>
+            <th class="text-center">Date Received</th>
+            <th class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for order in orders %}
+          <tr>
+            <td class="text-center">{{ order.client_id.first_name }} {{ order.client_id.last_name }}</td>
+            <td class="text-center">{{ order.product_id.name }}</td>
+            <td class="text-center">{{ order.order_date }}</td>
+            <td class="text-center">{{ order.quantity }}</td>
+            <td class="text-center">{{ order.delivery_date }}</td>
+            <td class="text-center">
+              <a href="{% url 'order-update' order.pk %}" class="btn btn-primary btn-sm">Edit</a>
+              <a href="{% url 'order-delete' order.pk %}" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+          </tr>
+          {% empty %}
+          <tr>
+            <td colspan="7" class="text-center">No orders found.</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% include 'includes/pagination.html' %}
+    </div>
+  </div>
+</div>
+{% endblock %}
