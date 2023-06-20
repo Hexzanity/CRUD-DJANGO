@@ -9,14 +9,11 @@
 
 <h2> System Features </h2>
 
-**Introduction Page**
-  - Page that shows the details about the example company.
-
 **Sign in and Out Page**
   - Page to log in the users and admin.
 
-**Cart System User's Page**
-  - Page that users can create order.
+**System Management Page**
+  - Page that the management can create order.
 
 **Dashboard of Admin**
   - Consist of tables and graphs about the sales from the users.
@@ -25,8 +22,8 @@
   - Count of Number of Clients
     
     **CRUD** - The system has CRUD features:
-      - Create - The user can create order from the User's page. Admin can add item/product.
-      - Read - The user can view the data of product from the user's page. Admin can view system's data from the admin dashboard page.
+      - Create - Admin can add item/product.
+      - Read - Admin can view system's data from the admin dashboard page.
       - Update - The admin can update/edit system's data from the dashboard page.
       - Delete - The admin can delete/cancel orders of the users.
 ### Requirement:
