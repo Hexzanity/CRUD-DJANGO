@@ -53,6 +53,7 @@ Step 3: Activate the Virtual Environment After creating the virtual environment,
 For Windows:
 
 myenv\Scripts\activate
+
 For macOS/Linux:
 
 source myenv/bin/activate
@@ -78,6 +79,9 @@ That's it! Django should now be installed on your system. You can start creating
 6. Select Additional Tasks then Click Next
 7. Click Install and Wait for it to finish
 8. Finish the Installation
+
+After all installation, go open the visual studio and click open folder in "Bootcamp-Django Folder".
+then click the New Terminal to Run the Application.
 
 <br> </br>
 
