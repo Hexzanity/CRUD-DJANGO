@@ -78,7 +78,8 @@ That's it! Django should now be installed on your system. You can start creating
 8. Finish the Installation
 
 After all installation, go open the visual studio and click open folder in "Bootcamp-Django Folder".
-then click the New Terminal to Run the Project.
+then click the New Terminal to Run the Project. This project was based from the Coding BoothCamp Files.
+No other extension added at the system.
 
 Just input "python manage.py runserver"
 
