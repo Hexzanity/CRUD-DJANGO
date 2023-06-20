@@ -81,7 +81,12 @@ That's it! Django should now be installed on your system. You can start creating
 8. Finish the Installation
 
 After all installation, go open the visual studio and click open folder in "Bootcamp-Django Folder".
-then click the New Terminal to Run the Application.
+then click the New Terminal to Run the Project.
+
+Just input "python manage.py runserver"
+
+The database of our django project is built-in database of django language which is "db.sqlite3" that we can locate at 
+\Bootcamp-Django\student_profiling folder.
 
 <br> </br>
 
