@@ -1,5 +1,5 @@
 # CRUD-DJANGO
-## USER SHOPPING CART AND ORDER SYSTEM
+## ORDER MANAGEMENT SYSTEM
 
 <p align="center">
 <img src="https://img.shields.io/github/directory-file-count/Hexzanity/CRUD-DJANGO" alt="File Count"></a>
