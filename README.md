@@ -32,7 +32,7 @@
 ### Requirement:
 
 Installation
-Fork the Repository From xchan344 github repositories
+Fork the Repository From Hexzanity github repositories
 
 To install Django, you can follow these steps:
 
